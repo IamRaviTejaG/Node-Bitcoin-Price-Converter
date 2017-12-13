@@ -1,0 +1,26 @@
+{
+  "name": "btc-price-ticker",
+  "version": "1.0.0",
+  "description": "Bitcoin Price Ticker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Bitcoin",
+    "Price",
+    "Bitcoin",
+    "Cryptocurrency",
+    "Dogecoin",
+    "Litecoin",
+    "Altcoin"
+  ],
+  "author": "Ravi Teja Gannavarapu",
+  "license": "MIT",
+  "dependencies": {
+    "blockchain.info": "^2.10.1",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.5"
+  }
+}
