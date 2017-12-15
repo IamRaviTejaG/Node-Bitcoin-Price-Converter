@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+* {
+  font-family: Barlow;
+}
+h3 {
+  display: inline-block;
+}
+p {
+  padding-left: 120px;
+}
+.in {
+  // border: 0px;
+  display: inline-block;
+  font-size: 200%;
+}
+input {
+  border: 2px solid #00fcc6;
+  border-radius: 5px;
+  font-size: 80%;
+  width: 250px;
+}
+label, p {
+  font-size: 200%;
+}
