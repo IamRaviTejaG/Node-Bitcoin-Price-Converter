@@ -6,7 +6,7 @@ app.set('port', process.env.PORT || 3000)
 app.set('views', './views')
 app.set('view engine', 'pug')
 app.use(morgan('tiny'))
-app.use(express.static('public'))
+app.use('/public', express.static('public'))
 app.use(require('./routes/btc'))
 
 app.get('/', function (req, res) {
