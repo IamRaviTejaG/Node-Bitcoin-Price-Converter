@@ -1,5 +1,6 @@
-# Bitcoin Price Converter (v1.2)
-###### Last Updated: 20 December 2017.
+# Bitcoin Price Converter (v1.3)
+#### [[Live](https://btc-price-converter.herokuapp.com/)]
+###### Last Updated: 02 January 2018.
 
 ## Dependencies
 * Express (`npm install express`)
@@ -8,6 +9,7 @@
 * Bittrex Node API (`npm install node-bittrex-api`)
 * Morgan (`npm install morgan`)
 * Pug (Previously, Jade) (`npm install pug`)
+* Request IP (`npm install request-ip`)
 
 ## Installing
 Clone the repo and run `npm install <foldername>` to install. This will install all the dependencies from `package.json`.
@@ -19,6 +21,11 @@ Replace <yourPreferredCurrency> with `usd`, `inr`, `eur`, `aud`, `cad`, `ltc`, `
 
 ***
 ##### Change Logs
+
+[v1.3] - [02 January 2018]
+* Now shows Client IP on every request.
+* Almost 20 times faster than v1.1.
+* Project is now [live here](https://btc-price-converter.herokuapp.com/).
 
 [v1.2] - [20 December 2017]
 * Now loads ~15 times faster.
@@ -34,4 +41,3 @@ Replace <yourPreferredCurrency> with `usd`, `inr`, `eur`, `aud`, `cad`, `ltc`, `
 
 ***
 ##### Copyright © 2017 Ravi Teja Gannavarapu
-

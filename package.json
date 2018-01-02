@@ -23,6 +23,7 @@
     "morgan": "^1.9.0",
     "node.bittrex.api": "^1.0.0",
     "nodemon": "^1.12.5",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.0-rc.4",
+    "request-ip": "^2.0.2"
   }
 }
