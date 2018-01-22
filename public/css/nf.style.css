@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Julius+Sans+One');
+
+#cip {
+  font-size: 120%;
+}
+
+#cip:hover {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.space1 {
+  height: 50px;
+}
+
+.space2 {
+  height: 80px;
+}
+
+* {
+  color: white;
+  font-family: 'Julius Sans One', Cinzel;
+  text-align: center;
+}
+
+body {
+	background: #000000;
+	background: -moz-linear-gradient(-45deg, #000000 0%, #45484d 100%);
+	background: -webkit-linear-gradient(-45deg, #000000 0%,#45484d 100%);
+	background: linear-gradient(135deg, #000000 0%,#45484d 100%);
+	background-attachment:fixed;
+}
+
+p {
+  font-size: 130%;
+}

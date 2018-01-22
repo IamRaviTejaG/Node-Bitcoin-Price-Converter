@@ -1,24 +1,79 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow');
-* {
-  font-family: Barlow;
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Julius+Sans+One');
+
+@media(max-width: 768px) {
+	h1 {
+		font-size: 200%;
+	}
 }
-h3 {
-  display: inline-block;
+
+@media(min-width: 768px) {
+	h1 {
+		font-size: 300%;
+	}
 }
-p {
-  padding-left: 120px;
+
+@media(min-width: 992px) {
+	h1 {
+		font-size: 350%;
+	}
 }
+
+@media(min-width: 1200px) {
+	h1 {
+		font-size: 450%;
+	}
+}
+
+#cip {
+  font-size: 120%;
+}
+
+#cip:hover {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+#invalidText {
+  font-size: 130%;
+}
+
 .in {
-  // border: 0px;
-  display: inline-block;
   font-size: 200%;
 }
-input {
+
+.space1 {
+  height: 50px;
+}
+
+.space2 {
+  height: 80px;
+}
+
+* {
+  color: white;
+  font-family: 'Julius Sans One', Cinzel;
+  text-align: center;
+}
+
+body {
+	background: #000000;
+	background: -moz-linear-gradient(-45deg, #000000 0%, #45484d 100%);
+	background: -webkit-linear-gradient(-45deg, #000000 0%,#45484d 100%);
+	background: linear-gradient(135deg, #000000 0%,#45484d 100%);
+	background-attachment:fixed;
+}
+
+input[type="text"] {
   border: 2px solid #00fcc6;
-  border-radius: 5px;
-  font-size: 80%;
-  width: 250px;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
 }
-label, p {
+
+label {
   font-size: 200%;
+}
+
+p {
+  font-size: 130%;
 }

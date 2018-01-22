@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= fromCurr %> to <%= toCurr %> | Bitcoin Price Converter</title>
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css" />
+    <link rel="icon" href="../public/favicon.ico" />
+    <script src='../public/js/jquery-3.2.1.min.js'></script>
+    <script src='../public/js/bootstrap.min.js'></script>
+  </head>
+  <body>
+    <script>
+      var c = <%= rate %>
+      function myFunction1() {
+        document.getElementById('fiat_out').value = (parseFloat(document.getElementById('btc_in').value) * c).toFixed(2);
+      }
+      function myFunction2() {
+        document.getElementById('btc_in').value = (parseFloat(document.getElementById('fiat_out').value) / c).toFixed(4);
+      }
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+              <h1><%= fromCurr %> -> <%= toCurr %></h1>
+          </div>
+      </div>
+      <div class="space1"></div>
+      <div class="row">
+        <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+          <input class="in fg col-xs-4 col-sm-4 col-md-3 col-lg-3" type="text" name="btc_in" id="btc_in" value="1" onkeyup="myFunction1()" />
+          <label class="fg col-xs-1 col-sm-1 col-md-1 col-lg-1"><%= fromCurr %></label>
+          <p class="fg col-xs-2 col-sm-2 col-md-2 col-lg-2">equals</p>
+          <input class="in fg col-xs-4 col-sm-4 col-md-3 col-lg-3" type="text" name="fiat_out" id="fiat_out" value=<%= rate %> onkeyup="myFunction2()" />
+          <label class="fg col-xs-1 col-sm-1 col-md-1 col-lg-1"><%= toCurr %></label>
+        </div>
+      </div>
+      <div class="space1"></div>
+      <p>~ Popular Conversion Routes ~</p>
+      <div class="row">
+        <p><a href="/btc/usd">USD</a> | <a href="/btc/inr">INR</a> | <a href="/btc/eur">EUR</a> | <a href="/btc/aud">AUD</a> | <a href="/btc/sgd">SGD</a> | <a href="/btc/nzd">NZD</a></p>
+        <p><a href="/btc/ltc">LTC</a> | <a href="/btc/eth">ETH</a> | <a href="/btc/doge">DOGE</a> | <a href="/btc/xmr">XMR</a> | <a href="/btc/ppc">PPC</a> | <a href="/btc/nxt">NXT</a></p>
+        <p><a href="/">Home</a> | <a href="/all">List of all currencies</a></p>
+      </div>
+      <div class="space2"></div>
+      <hr>
+      <h5 id="cip">Client IP: <%= cIP %></h5>
+    </div>
+  </body>
+</html>

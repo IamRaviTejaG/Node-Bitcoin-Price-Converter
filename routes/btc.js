@@ -1,13 +1,12 @@
 const bittrex = require('node.bittrex.api')
 const exchange = require('blockchain.info/exchange')
 const express = require('express')
-const fs = require('fs')
 const requestIP = require('request-ip')
 const router = express.Router()
 const app = express()
 
 app.set('views', './views')
-app.set('view engine', 'pug')
+app.set('view engine', 'ejs')
 
 bittrex.options({
   'apikey': '6f47f58c26d84bb5821b98d61bc28503',
@@ -52,7 +51,7 @@ function fetchBittrexData () {
     crl = data
   })
   if (crl !== undefined) {
-    for (var i=0; i<crl.result.length;i++) {
+    for (var i=0; i<crl.result.length; i++) {
       crlMarketName.push(crl.result[i].MarketName)
     }
   }
@@ -72,7 +71,7 @@ router.get('/btc/:currency', function (req, res) {
   if (fiat[fiat.indexOf(curr)] === curr) {
     rate = frl[curr].last
     rate = parseFloat(rate).toFixed(2)
-    res.render('btc.pug', {rate: rate,
+    res.render('btc', {rate: rate,
       fromCurr: 'BTC',
       toCurr: curr,
       cIP: clientIp
@@ -81,20 +80,14 @@ router.get('/btc/:currency', function (req, res) {
     var marketname = "BTC-" + curr
     rate = crl.result[crlMarketName.indexOf(marketname)].Last
     rate = parseFloat(1/rate).toFixed(4)
-    res.render('btc.pug', {rate: rate,
+    res.render('btc', {rate: rate,
       fromCurr: 'BTC',
       toCurr: curr,
       cIP: clientIp
     })
   } else {
-    res.render('notfound.pug', {cIP: clientIp})
+    res.render('notfound', {cIP: clientIp})
   }
-  const file = req.app.get('ipdatafilepath')
-  var ipdata = clientIp + '\n'
-  fs.appendFile(file, ipdata, (err) => {
-    if (err) console.log(Date.now() + ': Client IP couldn\'t be stored!')
-    console.log(Date.now() + ': Client IP stored!')
-  })
 })
 
 module.exports = router
